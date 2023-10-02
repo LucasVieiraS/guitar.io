@@ -176,10 +176,10 @@ const formatChords = (chords: Chords[], lyrics: string) => {
 }
 
 export default function Tab() {
-    return <pre className="py-6">
+    return <pre className="my-4">
         {tab.map((tabData) => {
             return <>
-                <p className="font-bold">{formatChords(tabData.chords, tabData.lyrics)}</p>
+                <p className="font-bold transition-opacity hover:opacity-50 hover:cursor-pointer">{formatChords(tabData.chords, tabData.lyrics)}</p>
                 <p>{tabData.lyrics}</p>
             </>
         })}
